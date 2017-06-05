@@ -12,6 +12,9 @@ import {
 
 import {StackNavigator} from 'react-navigation'
 import WidgetsTest from './widgets_demo/WidgetsTest'
+import Game2048 from './widgets_demo/Game2048'
+import TicTacToeApp from './widgets_demo/TicTacToeApp'
+import MoviesApp from './widgets_demo/movies/MoviesApp.android'
 
 screens = {
     AppNavigator: {
@@ -21,6 +24,18 @@ screens = {
     WidgetsTest: {
         name: "WidgetsTest",
         screen: WidgetsTest
+    },
+    Game2048: {
+        name: "Game2048",
+        screen: Game2048
+    },
+    TicTacToeApp: {
+        name: "TicTacToeApp",
+        screen: TicTacToeApp
+    },
+    MoviesApp: {
+        name: "MoviesApp",
+        screen: MoviesApp
     }
 };
 
@@ -28,7 +43,8 @@ screens = {
 class MainPage extends BaseComponent {
     constructor({navigation}) {
         super({navigation});
-        this.navigation = navigation;    }
+        this.navigation = navigation;
+    }
 
     render() {
         return (<ScrollView>
