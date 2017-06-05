@@ -1,7 +1,7 @@
 import React from 'react'
 
 import AppNavigator from './react-navigation-demo/NavigationPlayground/js/App'
-
+import BaseComponent from './base/components/BaseComponent'
 import {
     Text,
     Platform,
@@ -25,11 +25,10 @@ screens = {
 };
 
 
-class MainPage extends React.PureComponent {
+class MainPage extends BaseComponent {
     constructor({navigation}) {
-        super();
-        this.navigation = navigation;
-    }
+        super({navigation});
+        this.navigation = navigation;    }
 
     render() {
         return (<ScrollView>
