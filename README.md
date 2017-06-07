@@ -31,7 +31,10 @@
 <a name="widget_list"></a>
 
 ## Widget List[目录](#user-content-top)
-<a name="text"></a>Text 文本（18）
+<a name="text"></a>
+
+Text 文本（18）
+
 | 属性名                                      | 取值                                       | 描述                                       |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | color                                    | [<color>](#user-content-color)           | 对应 `CSS` [color](http://css.doyoe.com/properties/color/color.htm) 属性 |
