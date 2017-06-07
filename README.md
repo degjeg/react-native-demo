@@ -126,7 +126,10 @@ Image[目录](#user-content-top)
 4. ：none（默认值），拖拽时不隐藏软键盘。
 5. ：on-drag 当拖拽开始的时候隐藏软键盘。
 6. ：interactive 软键盘伴随拖拽操作同步地消失，并且如果往上滑动会恢复键盘。[安卓](http://lib.csdn.net/base/android)设备上不支持这个选项，会表现的和none一样。
-7. ：keyboardShouldPersistTaps bool
+7. ：keyboardShouldPersistTaps enum
+   1.  `'never'`（默认值），点击TextInput以外的子组件会使当前的软键盘收起。此时子元素不会收到点击事件。
+   2. `'always'`，键盘不会自动收起，ScrollView也不会捕捉点击事件，但子组件可以捕获。
+   3. `'handled'`，当点击事件被子组件捕获时，键盘不会自动收起。这样切换TextInput时键盘可以保持状态。多数带有TextInput的情况下你应该选择此项。
 
 当此属性为false的时候，在软键盘激活之后，点击焦点文本输入框以外的地方，键盘就会隐藏。如果为true，滚动视图不会响应点击操作，并且键盘不会自动消失。默认值为false。
 

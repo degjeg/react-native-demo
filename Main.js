@@ -6,8 +6,9 @@ import {
     Text,
     Platform,
     ScrollView,
-
+    StyleSheet,
     ToastAndroid,
+    TouchableOpacity,
 } from 'react-native';
 
 import {StackNavigator} from 'react-navigation'
@@ -48,31 +49,40 @@ class MainPage extends BaseComponent {
     }
 
     render() {
-        return (<ScrollView>
+        return (<ScrollView >
                 {
-                    Object.keys(screens).map((k, i) => (<Text
-                        key={i}
-                        onPress={() => {
-                            // ToastAndroid.show(JSON.stringify(this.navigation), ToastAndroid.SHORT);
-                            this.navigation.navigate(k, {});
-                        }}
-                    >{k}</Text>))
+                    Object.keys(screens).map((k, i) => (
+                        <TouchableOpacity key={i}
+                            style={styles.listItem}
+                            onPress={() => {
+                                // ToastAndroid.show(JSON.stringify(this.navigation), ToastAndroid.SHORT);
+                                this.navigation.navigate(k, {});
+                            }}><Text
+
+
+
+                        >{k}</Text>
+                        </TouchableOpacity>))
                 }
+                {
+                    [1, 2, 3].map((item, position) => {
+                        return (<TouchableOpacity key={position+100000} style={styles.listItem}><Text >{item}</Text></TouchableOpacity>);
+                    })
 
-
-                <Text>1</Text>
-
-                <Text>1</Text>
-                <Text>1</Text>
-                <Text>1</Text>
-                <Text>1</Text>
-                <Text>1</Text>
-                <Text>1</Text>
+                }
             </ScrollView>
         );
     }
 }
 
+styles = StyleSheet.create({
+    listItem: {
+        paddingLeft: 12,
+        height: 44,
+        justifyContent: 'center',
+
+    }
+});
 TestList = StackNavigator(
     {
         ...screens,

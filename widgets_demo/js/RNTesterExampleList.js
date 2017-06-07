@@ -115,7 +115,7 @@ class RNTesterExampleList extends React.Component {
           renderItem={this._renderItem}
           enableEmptySections={true}
           itemShouldUpdate={this._itemShouldUpdate}
-          keyboardShouldPersistTaps="handled"
+          keyboardShouldPersistTaps="always"
           automaticallyAdjustContentInsets={false}
           keyboardDismissMode="on-drag"
           legacyImplementation={false}
