@@ -9,7 +9,8 @@
 ## <a name="top"></a>目录
 
 * [组件列表](#user-content-widget_list)
-    * [Text 文本](#user-content-text)
+    * [Text 文本](#user-content-widget_text)
+    * [Image](#user-content-widget_image)
 * [Properties 属性](#user-content-properties)
     * [Dimension 尺寸](#user-content-dimension)
     * [Positioning 定位](#user-content-positioning)
@@ -30,10 +31,9 @@
 
 <a name="widget_list"></a>
 
-## Widget List[目录](#user-content-top)
-<a name="text"></a>
-
-Text 文本（18）
+## Widget List
+<a name="widget_text"></a>
+Text 文本（18）[目录](#user-content-top)
 
 | 属性名                                      | 取值                                       | 描述                                       |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -55,13 +55,54 @@ Text 文本（18）
 | textDecorationColor<br /><sup>`iOS`</sup> | [&lt;color&gt;](#user-content-color)     | 对应 `CSS` [text-decoration-color](http://css.doyoe.com/properties/text-decoration/text-decoration-color.htm) 属性 |
 | textDecorationStyle<br /><sup>`iOS`</sup> | `solid`, `double`, `dotted`, `dashed`    | 对应 `CSS` [text-decoration-style](http://css.doyoe.com/properties/text-decoration/text-decoration-style.htm) 属性，但阉割了 `wavy` 取值 |
 | writingDirection<br /><sup>`iOS`</sup>   | `auto`, `ltr`, `rtl`                     | 对应 `CSS` [direction](http://css.doyoe.com/properties/writing-modes/direction.htm) 属性，增加了 `auto` 取值 |
+| numberOfLines                            |                                          | 文本行数限制，添加后超过限制行数文本会在末尾默认以...的形式省略。       |
+| ellipsizeMode                            | `tail`,`clip`,`head`,`middle` ...在文本中的位置 | 设置文本缩略格式，配合numberOfLines使用               |
 
+<a name="widget_image"></a>
+Image[目录](#user-content-top)
 
-
-------
-
-
-
+| resizeMode : 枚举类型 | cover，contain，stretch | 表示图片适应的模式。 |
+| ----------------- | --------------------- | ---------- |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
+|                   |                       |            |
 
 
 <a name="properties"></a>
