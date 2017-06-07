@@ -15,27 +15,28 @@ import WidgetsTest from './widgets_demo/WidgetsTest'
 import Game2048 from './widgets_demo/Game2048'
 import TicTacToeApp from './widgets_demo/TicTacToeApp'
 import MoviesApp from './widgets_demo/movies/MoviesApp.android'
+import RNTesterApp from './widgets_demo/js/RNTesterApp.android'
 
 screens = {
     AppNavigator: {
-        name: "NavigatorTest",
+        // name: "NavigatorTest",
         screen: AppNavigator
     },
     WidgetsTest: {
-        name: "WidgetsTest",
+        // name: "WidgetsTest",
         screen: WidgetsTest
     },
     Game2048: {
-        name: "Game2048",
+        // name: "Game2048",
         screen: Game2048
     },
     TicTacToeApp: {
-        name: "TicTacToeApp",
+        // name: "TicTacToeApp",
         screen: TicTacToeApp
     },
-    MoviesApp: {
-        name: "MoviesApp",
-        screen: MoviesApp
+    RNTesterApp: {
+        // name: "RNTesterApp",
+        screen: RNTesterApp
     }
 };
 
@@ -55,7 +56,7 @@ class MainPage extends BaseComponent {
                             // ToastAndroid.show(JSON.stringify(this.navigation), ToastAndroid.SHORT);
                             this.navigation.navigate(k, {});
                         }}
-                    >{screens[k].name}</Text>))
+                    >{k}</Text>))
                 }
 
 
