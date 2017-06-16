@@ -42,7 +42,7 @@ var THUMB_URLS = [
   require('./Thumbnails/superlike.png'),
   require('./Thumbnails/victory.png'),
 ];
-var NUM_SECTIONS = 100;
+var NUM_SECTIONS = 5;
 var NUM_ROWS_PER_SECTION = 10;
 
 class Thumb extends React.Component {

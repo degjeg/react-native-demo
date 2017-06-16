@@ -17,6 +17,11 @@ import Game2048 from './widgets_demo/Game2048'
 import TicTacToeApp from './widgets_demo/TicTacToeApp'
 import MoviesApp from './widgets_demo/movies/MoviesApp.android'
 import RNTesterApp from './widgets_demo/js/RNTesterApp.android'
+import GiftedListViewAdvancedDemo from './widgets_demo/pull_to_refresh/react-native-gifted-listview/example_advanced'
+import GiftedListViewSimpledDemo from './widgets_demo/pull_to_refresh/react-native-gifted-listview/example_advanced'
+// import RefresherBasicPtr from './widgets_demo/pull_to_refresh/react-native-refresher/RefresherBasicPtr'
+// import RefresherAdvanced from './widgets_demo/pull_to_refresh/react-native-refresher/RefresherAdvanced'
+import Ptr58Test from './widgets_demo/pull_to_refresh/react-native_pull/Ptr58Test'
 
 screens = {
     AppNavigator: {
@@ -38,6 +43,18 @@ screens = {
     RNTesterApp: {
         // name: "RNTesterApp",
         screen: RNTesterApp
+    },
+    GiftedListViewAdvancedDemo: {
+        // name: "RNTesterApp",
+        screen: GiftedListViewAdvancedDemo
+    },
+    GiftedListViewSimpledDemo: {
+        // name: "RNTesterApp",//
+        screen: GiftedListViewSimpledDemo
+    },
+    Ptr58Test: {
+        // name: "RNTesterApp",
+        screen: Ptr58Test
     }
 };
 
@@ -53,12 +70,11 @@ class MainPage extends BaseComponent {
                 {
                     Object.keys(screens).map((k, i) => (
                         <TouchableOpacity key={i}
-                            style={styles.listItem}
-                            onPress={() => {
-                                // ToastAndroid.show(JSON.stringify(this.navigation), ToastAndroid.SHORT);
-                                this.navigation.navigate(k, {});
-                            }}><Text
-
+                                          style={styles.listItem}
+                                          onPress={() => {
+                                              // ToastAndroid.show(JSON.stringify(this.navigation), ToastAndroid.SHORT);
+                                              this.navigation.navigate(k, {});
+                                          }}><Text
 
 
                         >{k}</Text>
@@ -66,7 +82,8 @@ class MainPage extends BaseComponent {
                 }
                 {
                     [1, 2, 3].map((item, position) => {
-                        return (<TouchableOpacity key={position+100000} style={styles.listItem}><Text >{item}</Text></TouchableOpacity>);
+                        return (<TouchableOpacity key={position + 100000}
+                                                  style={styles.listItem}><Text >{item}</Text></TouchableOpacity>);
                     })
 
                 }

@@ -13,6 +13,8 @@
 
 var React = require('react');
 var ReactNative = require('react-native');
+const Dimensions = require('Dimensions');
+
 var {
   Image,
   ListView,
@@ -75,13 +77,16 @@ var ListViewGridLayoutExample = React.createClass({
   _renderRow: function(rowData: string, sectionID: number, rowID: number) {
     var rowHash = Math.abs(hashCode(rowData));
     var imgSource = THUMB_URLS[rowHash % THUMB_URLS.length];
+    let totalLine = Math.floor((this.state.dataSource.getRowCount() + 2) / 3);
+    let lineOfRow = Math.floor((parseInt(rowID) + 3) / 3);
+    let isLastLine = totalLine === lineOfRow;
     return (
       <TouchableHighlight onPress={() => this._pressRow(rowID)} underlayColor="transparent">
         <View>
-          <View style={styles.row}>
+          <View style={[styles.row, {marginBottom:(isLastLine?5:0)}]}>
             <Image style={styles.thumb} source={imgSource} />
             <Text style={styles.text}>
-              {rowData}
+              {rowData+"t:"+totalLine+",l:"+lineOfRow+",rowId,"+rowID}
             </Text>
           </View>
         </View>
@@ -117,7 +122,7 @@ var hashCode = function(str) {
 
 var styles = StyleSheet.create({
   list: {
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start'
@@ -125,11 +130,12 @@ var styles = StyleSheet.create({
   row: {
     justifyContent: 'center',
     padding: 5,
-    margin: 3,
-    width: 100,
+    marginLeft: 5,
+    marginTop: 5,
+    width: (Dimensions.get('window').width-4*5)/3,
     height: 100,
     backgroundColor: '#F6F6F6',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#CCC'
