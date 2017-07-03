@@ -60,7 +60,7 @@ class PickerExample extends React.Component {
             selectedValue={this.state.selected2}
             onValueChange={this.onValueChange.bind(this, 'selected2')}
             mode="dropdown">
-            <Item label="hello" value="key0" />
+            <Item style={{marginTop:300, width:600, backgroundColor:'#66666666'}} label="hello danger" value="key0" />
             <Item label="world" value="key1" />
           </Picker>
         </RNTesterBlock>
@@ -124,6 +124,7 @@ class PickerExample extends React.Component {
 var styles = StyleSheet.create({
   picker: {
     width: 100,
+      marginTop:50
   },
 });
 

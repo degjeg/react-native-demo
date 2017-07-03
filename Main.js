@@ -22,6 +22,7 @@ import GiftedListViewSimpledDemo from './widgets_demo/pull_to_refresh/react-nati
 // import RefresherBasicPtr from './widgets_demo/pull_to_refresh/react-native-refresher/RefresherBasicPtr'
 // import RefresherAdvanced from './widgets_demo/pull_to_refresh/react-native-refresher/RefresherAdvanced'
 import Ptr58Test from './widgets_demo/pull_to_refresh/react-native_pull/Ptr58Test'
+import Es6Syntax from './es6'
 
 screens = {
     AppNavigator: {
@@ -55,6 +56,10 @@ screens = {
     Ptr58Test: {
         // name: "RNTesterApp",
         screen: Ptr58Test
+    },
+    Es6Syntax: {
+        // name: "RNTesterApp",
+        screen: Es6Syntax
     }
 };
 
@@ -100,7 +105,7 @@ styles = StyleSheet.create({
 
     }
 });
-TestList = StackNavigator(
+let TestList = StackNavigator(
     {
         ...screens,
         MainPage: {
